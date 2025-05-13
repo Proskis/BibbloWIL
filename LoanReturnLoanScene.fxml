@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.bibbliotekcaseWIL.LoanReturnLoanController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" text="Log out" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button layoutX="217.0" layoutY="200.0" mnemonicParsing="false" onAction="#OpenReturnLoanPage" text="Return Loan" AnchorPane.topAnchor="200.0">
+         <padding>
+            <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button layoutX="217.0" layoutY="147.0" mnemonicParsing="false" onAction="#OpenLoanPage" prefHeight="37.0" prefWidth="165.0" text="Loan Item">
+         <padding>
+            <Insets bottom="10.0" left="40.0" right="50.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button layoutX="535.0" layoutY="354.0" mnemonicParsing="false" onAction="#OpenMainSceneTest" prefHeight="25.0" prefWidth="45.0" text="Back" />
+   </children>
+</AnchorPane>

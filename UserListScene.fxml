@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.bibbliotekcaseWIL.UserListController">
+   <children>
+      <ListView fx:id="userListView" prefHeight="327.0" prefWidth="200.0" />
+      <VBox layoutX="358.0" layoutY="40.0" prefHeight="115.0" prefWidth="211.0" spacing="5.0">
+         <children>
+            <TextField fx:id="firstNameField" />
+            <TextField fx:id="lastNameField" />
+            <TextField fx:id="emailField" />
+            <TextField fx:id="phoneNumberField" />
+            <TextField fx:id="usernameField" />
+            <PasswordField fx:id="passwordField" />
+            <TextField fx:id="userTypeIDField" />
+         </children>
+      </VBox>
+      <Text layoutX="292.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="57.076171875" />
+      <Text layoutX="293.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" wrappingWidth="55.892578125" />
+      <Text layoutX="321.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="33.609375" />
+      <Text layoutX="270.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" wrappingWidth="81.0" />
+      <Button fx:id="addUserButton" layoutX="531.0" layoutY="253.0" mnemonicParsing="false" onAction="#addUser" text="Add" />
+      <Button fx:id="findButton" layoutX="271.0" layoutY="361.0" mnemonicParsing="false" onAction="#find" text="Find" />
+      <Text layoutX="14.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find by last name:" />
+      <TextField fx:id="searchByLastNameField" layoutX="115.0" layoutY="361.0" />
+      <Button fx:id="browseAllButton" layoutX="318.0" layoutY="361.0" mnemonicParsing="false" onAction="#browseAll" text="Browse all" />
+      <Text layoutX="291.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserTypeID" />
+      <Text layoutX="300.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="55.892578125" />
+      <Text layoutX="300.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="55.892578125" />
+      <Button fx:id="backButton" layoutX="543.0" layoutY="361.0" mnemonicParsing="false" onAction="#backToMain" text="Back" />
+      <Button fx:id="deleteUserButton" layoutX="362.0" layoutY="253.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete" />
+   </children>
+</AnchorPane>

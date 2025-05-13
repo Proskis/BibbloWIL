@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.bibbliotekcaseWIL.LoanController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" text="Log out" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button layoutX="219.0" layoutY="200.0" mnemonicParsing="false" onAction="#LoanItem" text="Loan">
+         <padding>
+            <Insets bottom="10.0" left="68.0" right="68.0" top="10.0" />
+         </padding>
+      </Button>
+      <Label layoutX="173.0" layoutY="149.0" text="UserID">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </Label>
+      <Label layoutX="173.0" layoutY="121.0" text="ItemID ">
+         <padding>
+            <Insets top="3.0" />
+         </padding>
+      </Label>
+      <VBox layoutX="219.0" layoutY="121.0" prefHeight="56.0" prefWidth="162.0" spacing="5.0">
+         <children>
+            <TextField fx:id="itemIdField" />
+            <TextField fx:id="userIdField" editable="false" focusTraversable="false" />
+         </children>
+      </VBox>
+      <Button layoutX="535.0" layoutY="354.0" mnemonicParsing="false" onAction="#OpenLoanReturnLoanPage" prefHeight="25.0" prefWidth="45.0" text="Back" />
+      <Label layoutX="274.0" layoutY="60.0" scaleX="2.0" scaleY="2.0" text="Loan Item" AnchorPane.leftAnchor="274.0" AnchorPane.topAnchor="60.0" />
+   </children>
+</AnchorPane>
