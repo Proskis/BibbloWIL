@@ -177,6 +177,4 @@ public class LoginLogic {
     }
     return username;
 }
-
- 
 }

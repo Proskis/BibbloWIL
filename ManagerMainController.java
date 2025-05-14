@@ -48,6 +48,18 @@ public class ManagerMainController {
      * @throws IOException
      */
      
+     
+    public void OpenCurrentLoanScene(ActionEvent event) throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("currentLoan.fxml"));
+        
+        root = loader.load();
+        stage = (Stage) scenePane.getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        
+    }
     public void SwitchToUserList(ActionEvent event) throws IOException {
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("UserListScene.fxml"));

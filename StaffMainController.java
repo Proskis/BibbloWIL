@@ -54,6 +54,17 @@ public class StaffMainController {
         stage.setScene(scene);
         stage.show();
     }
+    
+     public void OpenCurrentLoanScene(ActionEvent event) throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("currentLoan.fxml"));
+        
+        root = loader.load();
+        stage = (Stage) scenePane.getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
           
      /**
      * Visar en bekräftelsedialog för att logga ut användaren.

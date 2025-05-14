@@ -33,6 +33,7 @@
           <Menu mnemonicParsing="false" text="Administration">
                <items>
                   <MenuItem fx:id="manageUsersButton" mnemonicParsing="false" onAction="#SwitchToUserList" text="Manage Users" />
+                  <MenuItem mnemonicParsing="false" onAction="#OpenCurrentLoanScene" text="Active Loans" />
                </items>
           </Menu>
         </menus>

@@ -7,8 +7,10 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.bibbliotekcaseWIL.ReturnLoanController">
    <children>
@@ -27,18 +29,29 @@
             </Menu>
          </menus>
       </MenuBar>
-      <Button layoutX="219.0" layoutY="200.0" mnemonicParsing="false" onAction="#ReturnLoanItem" prefHeight="37.0" prefWidth="162.0" text="Return Loan">
-         <padding>
-            <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
-         </padding>
-      </Button>
-      <Label layoutX="168.0" layoutY="158.0" text="LoanID">
+      <Button layoutX="461.0" layoutY="174.0" mnemonicParsing="false" onAction="#ReturnLoanItem" prefHeight="37.0" prefWidth="130.0" text="Return Loan" />
+      <Label layoutX="480.0" layoutY="137.0" text="LoanID">
          <padding>
             <Insets top="5.0" />
          </padding>
       </Label>
       <Button layoutX="535.0" layoutY="354.0" mnemonicParsing="false" onAction="#OpenLoanReturnLoanPage" prefHeight="25.0" prefWidth="45.0" text="Back" />
-      <Label layoutX="268.0" layoutY="64.0" scaleX="2.0" scaleY="2.0" text="Return Loan" AnchorPane.leftAnchor="268.0" AnchorPane.topAnchor="64.0" />
-      <TextField fx:id="loanIdField" layoutX="219.0" layoutY="159.0" prefHeight="25.0" prefWidth="162.0" />
+      <Label layoutX="503.0" layoutY="81.0" prefHeight="22.0" prefWidth="65.0" scaleX="2.0" scaleY="2.0" text="Return Loan" AnchorPane.leftAnchor="503.0" AnchorPane.topAnchor="81.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding></Label>
+      <TextField fx:id="loanIdField" layoutX="526.0" layoutY="135.0" prefHeight="26.0" prefWidth="63.0" />
+      <TextArea fx:id="MyLoansArea" editable="false" focusTraversable="false" layoutX="50.0" layoutY="80.0" prefHeight="300.0" prefWidth="400.0" />
+      <Label layoutX="205.0" layoutY="41.0" prefHeight="23.0" prefWidth="113.0" text="My Loans">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
    </children>
 </AnchorPane>

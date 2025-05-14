@@ -1,4 +1,5 @@
 
+
 package com.mycompany.bibbliotekcaseWIL;
 
 
@@ -84,15 +85,6 @@ public class LoanController {
         showAlert(Alert.AlertType.ERROR, "Database Error", "Användare finns inte, itemId finns inte eller så har användaren uppnått max antal lån");
     }
     }
-       public void SwitchToUserList(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("UserListScene.fxml"));
-        
-        root = loader.load();
-        stage = (Stage) scenePane.getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
     @FXML
     private AnchorPane scenePane;
     
@@ -108,15 +100,27 @@ public class LoanController {
         stage.show();
     }
     public void logout(ActionEvent event) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+          Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("You are logging out");
         alert.setContentText("Are you sure? ");
         
         if(alert.showAndWait().get() == ButtonType.OK) {
+            
+            Session.isManager = false;
+            Session.isStaff = false;
+            Session.isUser = false;
+            Session.loggedInName = null;
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginScene.fxml"));
+        
+            root = loader.load();
             stage = (Stage) scenePane.getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+            
             System.out.println("Logged out!");
-            stage.close(); 
 }
     }
     private void showAlert(Alert.AlertType type, String title, String content) {

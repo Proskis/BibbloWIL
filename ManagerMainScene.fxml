@@ -34,11 +34,12 @@
                <items>
                   <MenuItem fx:id="manageUsersButton" mnemonicParsing="false" onAction="#SwitchToUserList" text="Manage Users" />
                   <MenuItem fx:id="manageStaffButton" mnemonicParsing="false" onAction="#SwitchToStaffList" text="Manage Staff" />
+                  <MenuItem mnemonicParsing="false" onAction="#OpenCurrentLoanScene" text="Active Loans" />
                </items>
           </Menu>
         </menus>
       </MenuBar>
-      <Label layoutX="239.0" layoutY="64.0" text="ManagerMain">
+      <Label layoutX="226.0" layoutY="62.0" text="ManagerMain">
          <font>
             <Font size="18.0" />
          </font>
